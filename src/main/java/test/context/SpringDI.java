@@ -13,8 +13,9 @@ public class SpringDI {
         context.scan("test");
         context.refresh();
         StartUI ui = context.getBean(StartUI.class);
-        ui.add("Hello annotationConfigApplicationContext !!!");
-        ui.add("Hello Sekator !!!");
-        ui.print();
+        StartUI ui2 = context.getBean(StartUI.class);
+        System.out.println(ui == ui2);
+        System.out.println("ui: " + ui.getInfoStore());
+        System.out.println("ui2: " + ui2.getInfoStore());
     }
 }

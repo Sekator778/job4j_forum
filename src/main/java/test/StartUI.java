@@ -1,6 +1,7 @@
 package test;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -19,5 +20,8 @@ public class StartUI {
              ) {
             System.out.println(s);
         }
+    }
+    public int getInfoStore() {
+        return store.hashCode();
     }
 }

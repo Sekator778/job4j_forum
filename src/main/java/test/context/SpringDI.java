@@ -2,6 +2,7 @@ package test.context;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import test.StartUI;
+import test.Store;
 
 /**
  *
@@ -17,5 +18,9 @@ public class SpringDI {
         System.out.println(ui == ui2);
         System.out.println("ui: " + ui.getInfoStore());
         System.out.println("ui2: " + ui2.getInfoStore());
+        Store store1 = context.getBean(Store.class);
+        Store store2 = context.getBean(Store.class);
+        System.out.println(store1 == store2);
+
     }
 }

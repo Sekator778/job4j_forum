@@ -29,4 +29,11 @@ public class PostService {
     public void addPost(Post post) {
         repository.saveAndFlush(post);
     }
+    public void update(Post post) {
+        repository.deleteById(post.getId());
+        repository.saveAndFlush(post);
+    }
+    public void deletePostById(Long id) {
+        repository.deleteById(id);
+    }
 }

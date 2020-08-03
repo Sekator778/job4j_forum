@@ -1,8 +1,15 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Sekator
+  Date: 14.07.2020
+  Time: 20:31
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title>Add Post</title>
+    <title>Edit post</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
           integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
           crossorigin="anonymous"/>
@@ -25,8 +32,6 @@
     </style>
 </head>
 <body>
-<h2>ДОБАВИТЬ ТЕМУ <br> Только для залогинившихся пользователей.</h2>
-
 <br>
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand">Forum job4j users</a>
@@ -35,11 +40,12 @@
 <br>
 
 <div class="container">
-    <form action="<c:url value='/save'/>" method="post">
+    <form action="<c:url value='/update'/>" method="post">
         <div class="table table-bordered">
             <table class="table table-bordered" id="table">
                 <thead>
                 <tr>
+                    <th>ID</th>
                     <th>Name</th>
                     <th>Description</th>
                     <th>Date created</th>
@@ -47,14 +53,15 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><input type='text' name="name"></td>
-                    <td><input type='text' name="description"></td>
-<%--                    <td><input type='date' name="created"></td>--%>
+                    <td><input type='text' name="id"  value="<%= request.getParameter("id")%>"></td>
+                    <td><input type='text' name="name"  value="<%= request.getParameter("name")%>"></td>
+                    <td><input type='text' name="description"  value="<%= request.getParameter("description")%>"></td>
+                    <td><input type='text' name="created"  value="<%= request.getParameter("created")%>"></td>
                 </tr>
                 </tbody>
             </table>
             <div align="center">
-                <input name="submit" type="submit" value="Добавить">
+                <input name="submit" type="submit" value="Сохранить">
             </div>
         </div>
     </form>

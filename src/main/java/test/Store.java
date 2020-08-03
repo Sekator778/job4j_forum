@@ -1,12 +1,14 @@
 package test;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
  */
-
+@Component
 public class Store {
     private List<String> data = new ArrayList<>();
 

@@ -1,7 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -13,16 +13,17 @@
     <style>
         body {
             background-color: azure;
+            outline: 2px solid #000; /* Чёрная рамка */
+            border-radius: 10px; /* Радиус скругления */
+            border-width: 20px;
+            padding: 10px;
         }
-
         #table {
             background-color: darkseagreen;
         }
-
         th {
             background-color: chocolate;
         }
-
         h2 {
             color: rebeccapurple;
         }
@@ -35,6 +36,7 @@
                 url: window.location + "delete/" + id
             });
         }
+
         $(document).on("click", ".showHideButton", function () {
             if ($(this).parent().parent().hasClass("service-header") && $(this).parent().parent().is(":visible")) {
                 $(this).parent().parent().hide();
@@ -48,8 +50,10 @@
     <link rel="stylesheet" type="text/css" href="${contextPath}/resources/css/style.css">
 </head>
 <body>
-<div>
-    <h3>Вы вошли как: ${pageContext.request.userPrincipal.name}</h3>
+<div align="right">
+    <sec:authorize access="isAuthenticated()">
+        <h3>Вы вошли как: ${pageContext.request.userPrincipal.name}</h3>
+    </sec:authorize>
     <%--  В наших приложениях у нас может быть информация, которая должна отображаться только для определенных ролей
      или пользователей.
     В этом случае мы можем использовать  тег авторизации :--%>
@@ -60,6 +64,8 @@
     <sec:authorize access="isAuthenticated()">
         <h4><a href="/logout">Выйти</a></h4>
     </sec:authorize>
+</div>
+<div align="center">
     <h4><a href="/addPost">Добавить тему (только пользователь)</a></h4>
     <h4><a href="/admin">Пользователи (только админ)</a></h4>
 </div>
@@ -79,7 +85,7 @@
                     <td><input type="hidden" name="id" id="id" value="${post.id}">${post.id}</td>
                     <td><input type="hidden" name="name" value="${post.name}">${post.name}</td>
                     <td><input type="hidden" name="description" value="${post.description}">${post.description}</td>
-                    <td><input type="hidden" name="address" value="${post.created}">${post.created}</td>
+                    <td><fmt:formatDate type="date" value="${post.created.time}"/></td>
                     <td><input type="submit" class="button" name="edit" value="Edit"></td>
                     <td>
                         <button type='button' style="background-color: lightyellow"

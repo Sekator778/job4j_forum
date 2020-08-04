@@ -5,6 +5,10 @@ import org.springframework.security.core.GrantedAuthority;
 import javax.persistence.*;
 import java.util.Set;
 
+/**
+ * роль юзера в нашей системе
+ * для нормальной работы нужно проапдейтить таблицу конфигом src/db/insert.sql
+ */
 @Entity
 @Table(name = "t_role")
 public class Role implements GrantedAuthority {

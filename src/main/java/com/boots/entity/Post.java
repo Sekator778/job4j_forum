@@ -3,6 +3,9 @@ package com.boots.entity;
 import javax.persistence.*;
 import java.util.Calendar;
 
+/**
+ * мейн класс который представляет запись на форуме
+ */
 @Entity
 @Table(name = "Post")
 public class Post {
@@ -12,18 +15,8 @@ public class Post {
     private String name;
     private String description;
     private Calendar created;
-    public static Post of(String name) {
-        Post post = new Post();
-        post.name = name;
-        return post;
-    }
 
     public Post() {
-    }
-    public Post(String name, String description, Calendar created) {
-        this.name = name;
-        this.description = description;
-        this.created = created;
     }
 
     public Long getId() {

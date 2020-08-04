@@ -8,6 +8,10 @@ import javax.validation.constraints.Size;
 import java.util.Collection;
 import java.util.Set;
 
+/**
+ * пользователь с валидатором на полях
+ * которые участвуют в регистрации
+ */
 @Entity
 @Table(name = "t_user")
 public class User implements UserDetails {

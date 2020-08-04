@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-<h2>ДОБАВИТЬ ТЕМУ <br> Только для залогинившихся пользователей.</h2>
+<h2 align="center">ДОБАВИТЬ ТЕМУ</h2>
 
 <br>
 <nav class="navbar navbar-dark bg-dark">
@@ -42,14 +42,12 @@
                 <tr>
                     <th>Name</th>
                     <th>Description</th>
-                    <th>Date created</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td><input type='text' name="name"></td>
                     <td><input type='text' name="description"></td>
-<%--                    <td><input type='date' name="created"></td>--%>
                 </tr>
                 </tbody>
             </table>

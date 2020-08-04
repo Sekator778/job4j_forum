@@ -7,6 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <html>
 <head>
     <title>Edit post</title>
@@ -48,7 +50,6 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Description</th>
-                    <th>Date created</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -56,7 +57,6 @@
                     <td><input type='text' name="id"  value="<%= request.getParameter("id")%>"></td>
                     <td><input type='text' name="name"  value="<%= request.getParameter("name")%>"></td>
                     <td><input type='text' name="description"  value="<%= request.getParameter("description")%>"></td>
-                    <td><input type='text' name="created"  value="<%= request.getParameter("created")%>"></td>
                 </tr>
                 </tbody>
             </table>

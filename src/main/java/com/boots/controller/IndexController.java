@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Calendar;
+
 /**
- *
+ * контролер для страниц которые изменяют данные
  */
 @Controller
 public class IndexController {
@@ -21,26 +23,23 @@ public class IndexController {
         this.postService = postService;
     }
 
-    @GetMapping("/")
+    @GetMapping({"/", "/index"})
     public String index(Model model) {
         model.addAttribute("posts", postService.getAll());
 //        model.addAttribute("user", SecurityContextHolder.getContext().getAuthentication().getPrincipal());
-        return "/index";
+        return "index";
     }
 
     @PostMapping("/save")
     public String addPost(@ModelAttribute Post post) {
+        post.setCreated(Calendar.getInstance());
         postService.addPost(post);
         return "redirect:/";
     }
 
-    @GetMapping("/edit")
-    public String edit() {
-        return "/edit";
-    }
-
     @PostMapping("/update")
     public String updatePost(@ModelAttribute Post post) {
+        post.setCreated(Calendar.getInstance());
         postService.update(post);
         return "redirect:/";
     }

@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
 
+/**
+ * контролер для регистрации и вывода есепшинов во время регистрации
+ */
 @Controller
 public class RegistrationController {
 

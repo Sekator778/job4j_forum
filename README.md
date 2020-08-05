@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Sekator778/job4j_forum.svg?branch=master)](https://travis-ci.org/Sekator778/job4j_forum)
+[![codecov](https://codecov.io/gh/Sekator778/job4j_forum/branch/master/graph/badge.svg)](https://codecov.io/gh/Sekator778/job4j_forum)
 # job4j_forum
 <h2>Классическое приложение - форум</h2>
 <h4>Авторизация доступа имеет две роли User and Admin

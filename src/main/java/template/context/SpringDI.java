@@ -1,8 +1,8 @@
-package test.context;
+package template.context;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import test.StartUI;
-import test.Store;
+import template.StartUI;
+import template.Store;
 
 /**
  *
@@ -11,7 +11,7 @@ import test.Store;
 public class SpringDI {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.scan("test");
+        context.scan("template");
         context.refresh();
         StartUI ui = context.getBean(StartUI.class);
         StartUI ui2 = context.getBean(StartUI.class);

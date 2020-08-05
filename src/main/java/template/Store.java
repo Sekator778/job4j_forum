@@ -1,4 +1,4 @@
-package test;
+package template;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

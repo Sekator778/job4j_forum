@@ -1,4 +1,4 @@
-package com.boots.controller;
+package com;
 
 
 import com.boots.entity.Post;

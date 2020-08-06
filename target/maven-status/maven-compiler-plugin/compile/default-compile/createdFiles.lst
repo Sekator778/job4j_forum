@@ -4,10 +4,10 @@ com/boots/entity/Role.class
 template/Store.class
 com/boots/service/UserService.class
 com/boots/config/WebSecurityConfig.class
-com/IndexController.class
 com/boots/repository/RoleRepository.class
 com/boots/entity/User.class
 template/MainSystemProperties.class
+com/boots/controller/IndexController.class
 com/boots/service/PostService.class
 template/Context.class
 template/context/SpringDI.class

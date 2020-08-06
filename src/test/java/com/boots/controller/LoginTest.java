@@ -1,6 +1,5 @@
 package com.boots.controller;
 
-import com.IndexController;
 import com.boots.Main;
 import com.boots.entity.Post;
 import org.junit.jupiter.api.Test;
@@ -60,7 +59,7 @@ public class LoginTest {
     public void correctLoginTest() throws Exception {
         this.mockMvc.perform(formLogin().user("Sekator").password("1"))
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/index"));
+                .andExpect(redirectedUrl("/"));
     }
     @Test
     @WithMockUser

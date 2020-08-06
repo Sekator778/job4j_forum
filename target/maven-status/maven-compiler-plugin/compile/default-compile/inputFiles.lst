@@ -1,10 +1,10 @@
-/home/sekator/projects/job4j_forum/src/main/java/com/IndexController.java
 /home/sekator/projects/job4j_forum/src/main/java/template/StartUI.java
 /home/sekator/projects/job4j_forum/src/main/java/com/boots/controller/RegistrationController.java
 /home/sekator/projects/job4j_forum/src/main/java/com/boots/repository/UserRepository.java
 /home/sekator/projects/job4j_forum/src/main/java/com/boots/entity/Role.java
 /home/sekator/projects/job4j_forum/src/main/java/com/boots/controller/AdminController.java
 /home/sekator/projects/job4j_forum/src/main/java/com/boots/entity/User.java
+/home/sekator/projects/job4j_forum/src/main/java/com/boots/controller/IndexController.java
 /home/sekator/projects/job4j_forum/src/main/java/com/boots/Main.java
 /home/sekator/projects/job4j_forum/src/main/java/template/Store.java
 /home/sekator/projects/job4j_forum/src/main/java/com/boots/service/UserService.java

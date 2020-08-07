@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 
 @SpringBootApplication
 public class Main extends SpringBootServletInitializer {
+
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder applicationBuilder) {
         return applicationBuilder.sources(Main.class);

@@ -17,13 +17,13 @@ public class Main extends SpringBootServletInitializer {
         return applicationBuilder.sources(Main.class);
     }
 
-    @Bean
-    public SpringLiquibase liquibase(DataSource dataSource) {
-        SpringLiquibase liquibase = new SpringLiquibase();
-        liquibase.setChangeLog("classpath:liquibase-changeLog.xml");
-        liquibase.setDataSource(dataSource);
-        return liquibase;
-    }
+//    @Bean
+//    public SpringLiquibase liquibase(DataSource dataSource) {
+//        SpringLiquibase liquibase = new SpringLiquibase();
+//        liquibase.setChangeLog("classpath:liquibase-changeLog.xml");
+//        liquibase.setDataSource(dataSource);
+//        return liquibase;
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);

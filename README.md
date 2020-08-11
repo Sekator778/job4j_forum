@@ -4,6 +4,7 @@
 <h2>Классическое приложение - форум</h2>
 <h4>Авторизация доступа имеет две роли User and Admin
 </h4>
+<a href="https://glacial-coast-34892.herokuapp.com/">Heroku deploy</a>
 
 <h4>The following technologies were used:</h4>
 

@@ -48,4 +48,9 @@ public class IndexControllerTest {
                 .andDo(print())
                 .andExpect(status().is3xxRedirection());
     }
+
+    @Test
+    public void whenTestContentPage() {
+
+    }
 }

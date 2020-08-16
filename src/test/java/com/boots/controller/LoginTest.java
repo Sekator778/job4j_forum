@@ -50,14 +50,14 @@ public class LoginTest {
                 .andExpect(redirectedUrl("http://localhost/login"));
     }
 
-    @Test
-    @Sql(value = {"/create-user-before.sql"}, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
-    @Sql(value = {"/create-user-after.sql"}, executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
-    public void correctLoginTest() throws Exception {
-        this.mockMvc.perform(formLogin().user("Sekator").password("1"))
-                .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/index"));
-    }
+//    @Test
+//    @Sql(value = {"/create-user-before.sql"}, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+//    @Sql(value = {"/create-user-after.sql"}, executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
+//    public void correctLoginTest() throws Exception {
+//        this.mockMvc.perform(formLogin().user("Sekator").password("1"))
+//                .andExpect(status().is3xxRedirection())
+//                .andExpect(redirectedUrl("/index"));
+//    }
     @Test
     @WithMockUser
     public void editPost() throws Exception {

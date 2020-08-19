@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
 
 import javax.sql.DataSource;
 
@@ -17,6 +18,7 @@ public class Main extends SpringBootServletInitializer {
         return applicationBuilder.sources(Main.class);
     }
 
+    @Scope()
     @Bean
     public SpringLiquibase liquibase(DataSource dataSource) {
         SpringLiquibase liquibase = new SpringLiquibase();

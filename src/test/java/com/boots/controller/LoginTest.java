@@ -2,6 +2,7 @@ package com.boots.controller;
 
 import com.boots.Main;
 import com.boots.entity.Post;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
+@Ignore
 @SpringBootTest(classes = Main.class)
 @AutoConfigureMockMvc
 @TestPropertySource("classpath:application-test.properties")

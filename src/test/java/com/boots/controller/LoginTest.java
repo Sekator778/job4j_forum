@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.redirectedUrl;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-@Ignore
+
 @SpringBootTest(classes = Main.class)
 @AutoConfigureMockMvc
 @TestPropertySource("classpath:application-test.properties")
@@ -51,7 +51,7 @@ public class LoginTest {
                 .andExpect(redirectedUrl("http://localhost/login"));
     }
 
-//    @Test
+    //    @Test
 //    @Sql(value = {"/create-user-before.sql"}, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
 //    @Sql(value = {"/create-user-after.sql"}, executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
 //    public void correctLoginTest() throws Exception {

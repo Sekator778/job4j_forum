@@ -1,8 +1,3 @@
-drop table if exists post cascade;
-drop table if exists t_role cascade;
-drop table if exists t_user cascade;
-drop table if exists t_user_roles cascade;
-
 create table if not exists post
 (
     id          serial primary key,

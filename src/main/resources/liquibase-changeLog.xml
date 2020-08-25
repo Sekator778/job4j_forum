@@ -7,5 +7,5 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
     <include file="db/insert_001.sql" relativeToChangelogFile="true"/>
     <include file="db/insert_002.sql" relativeToChangelogFile="true"/>
-    <include file="db/insert_003.sql" relativeToChangelogFile="true"/>
+<!--    <include file="db/insert_003.sql" relativeToChangelogFile="true"/>-->
 </databaseChangeLog>
